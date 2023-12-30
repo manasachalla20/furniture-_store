@@ -1,0 +1,694 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZqtaOsPdfmGWSJTJ7SYRy6z9hbypCWcrUBQ&usqp=CAU">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Furniture Store</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Bona+Nova&family=Cabin:wght@600&family=Jost&family=Kanit:ital,wght@0,300;0,400;1,200;1,300&family=Lato&family=Noto+Sans:wght@300;500&family=Poppins:ital,wght@0,300;1,400&family=Prompt&family=Reem+Kufi&family=Roboto:wght@500&family=Teko:wght@300&family=Work+Sans&display=swap');
+        .container
+        {
+            height: 97vh;
+            width: 100%;
+            /* border: solid black; */
+            background-color:#456942;
+        }
+        .header{
+            height: 100px;
+            width: 100%;
+            /* border: solid black; */
+            display: flex;
+        }
+        .left{
+            /* height: 50px; */
+            width: 10%;
+            /* border: solid black; */
+            /* display: flex; */
+            /* flex-direction: column; */
+            margin: 0px 0 0 80px ;
+        }
+        .left h4{
+            margin: 25px 0 0 20px;
+            font-size: 14px;
+            color: white;
+        }
+        .left p{
+            font-size: 7px;
+            margin: 0 0 0 20px;
+            letter-spacing: 1px;
+            color: rgb(154, 148, 148);
+        }
+        .left span{
+            color: rgb(212, 169, 90);
+        }
+        .container .nav{
+            height: 50px;
+            width: 32%;
+            /* border: solid black; */
+            margin: 30px 0 0 520px;
+            position: sticky;
+            top: 0;
+            /* margin-top: 0px; */
+        }
+        /* .header .nav{
+            position: sticky;
+        } */
+        .header .nav a{
+            padding: 0 30px 0 0 ;
+            margin: 10px 0 0 0;
+            text-decoration: none;
+            color: white;
+            /* position: sticky; */
+        }
+        .nav a:hover{
+            text-decoration: underline;
+            color: rgb(202, 174, 124);
+        }
+        .header .icons{
+            height: 50px;
+            width: 10%;
+            /* border: solid black; */
+            margin: 28px 0 0 0;
+            display: flex;
+        }
+        .icons .bi-cart{
+           margin: 0 0 0 25px;
+        }
+        .home{
+            height: 84%;
+            width: 99%;
+            /* border: solid black; */
+            display: flex;
+        }
+        .home .first{
+            height: 400px;
+            width: 25%;
+            /* border: solid black; */
+            margin: 40px 0 0 100px;
+        }
+        .home .first h1 {
+            color: rgb(246, 240, 240);
+            font-size: 35px;
+            font-family: 'Bona Nova', serif;
+        }
+        .home .first p {
+            color: rgb(246, 240, 240);
+            font-family: 'Bona Nova', serif;
+        }
+        .buttons button {
+            background: none;
+            height: 40px;
+            width: 100px;
+            border: solid white 1px;
+            border-radius: 18px;
+            margin: 30px 0 0 30px;
+        }
+        .buttons a{
+            color: white;
+            text-decoration: none;
+
+        }
+        .buttons button:hover{
+           background-color: rgb(231, 180, 85);
+
+        }
+        .second{
+            height: 400px;
+            width: 50%;
+            /* border: solid black; */
+            margin: 40px 0 0 200px;
+        }
+        .second .image1 img{
+            height: 300px;
+            margin: 30px 0 0 100px;
+
+        }
+        .second .image2 img{
+            height: 250px;
+            margin:-190px 0 0 80px ;
+        }
+        .second .image3 img{
+            height: 250px;
+            width: 250px;
+            margin: -40px 0 0 280px;
+        }
+        .second .image2 img:hover{
+            transform: scale(1.1);
+            /* box-shadow: 10px 10px 20px; */
+
+        }
+        .secondpage{
+            height: 150vh;
+            width: 100%;
+            /* border: solid black; */
+            background-color: white;
+        }
+        .secondpage .one h2 {
+            font-family: 'Bona Nova', serif;
+        }
+        .secondpage .one p {
+            font-family: 'Bona Nova', serif;
+        }
+        .secondpage .items{
+            height: 400px;
+            width: 100%;
+            /* border: solid black; */
+            display: flex;
+            justify-content: space-around;
+        }
+        .items .item{
+            height: 390px;
+            width: 300px;
+            /* border: solid black; */
+        }
+        .secondpage .one button{
+            margin: 30px 0 0 100px;
+            height: 40px;
+            width: 100px;
+            border: solid rgb(65, 63, 63);
+            background-color: black;
+            border-radius: 22px;
+
+        }
+        .secondpage button a{
+            text-decoration: none;
+            color: white;
+        }
+        .secondpage .one button:hover{
+            background-color: orange;
+
+        }
+        .secondpage .two img{
+            height: 300px;
+            width: 300px;
+        }
+        .two h3{
+            margin: 0px 0 0 80px;
+        }
+        .two h4{
+            margin: 10px 0 0 120px;
+        }
+        .secondpage .three img{
+            height: 300px;
+            width: 300px;
+        }
+        .three h3{
+            margin: 0px 0 0 80px;
+        }
+        .three h4{
+            margin: 10px 0 0 120px;
+        }
+        .secondpage .four img{
+            height: 300px;
+            width: 300px;
+        }
+        .four h3{
+            margin: 0px 0 0 80px;
+        }
+        .four h4{
+            margin: 10px 0 0 120px;
+        }
+        .secondpage .two:hover{
+            background-color: rgb(235, 232, 242);
+        }
+        .secondpage .three:hover{
+            background-color: rgb(235, 232, 242);
+        }
+        .secondpage .four:hover{
+            background-color: rgb(235, 232, 242);
+        }
+        .secondpage .more {
+            height: 570px;
+            width: 100%;
+            /* border: solid black; */
+            display: flex;
+            gap: 50px;
+        }
+        .secondpage .more .choose{
+            height: 570px;
+            width: 50%;
+            /* border: solid black; */
+        }
+        
+        .secondpage .more .reason{
+            height: 130px;
+            width: 80%;
+            /* border: solid; */
+            margin: 0px 0 0 70px;
+        }
+        .more .choose h2{
+            font-family: 'Bona Nova', serif;
+            margin: 0px 0 0 0;
+        }
+        .more .choose p{
+            font-family: 'Bona Nova', serif;
+            /* margin: 10px 0 0 0; */
+        }
+        .more .avail{
+            height: 430px;
+            width: 80%;
+            /* border: solid; */
+            margin: 0px 0 0 70px;
+            display: grid;
+            grid-template-columns: 50% 50%;
+            grid-template-rows: 50% 50%;
+            gap: 30px;
+        }
+        .more .avail h2{
+            margin: 5px 0 0 0;
+            font-family: 'Bona Nova', serif;
+        
+        }
+        .more .avail p{
+            margin: 5px 0 0 0;
+            font-size: 13px;
+            font-family: 'Bona Nova', serif;
+        }
+        .secondpage .more .modern{
+            height: 570px;
+            width: 50%;
+            /* border: solid black; */
+        }
+        .secondpage .modern img{
+            margin: 40px 0 0 50px;
+            height: 150px;
+        }
+        .secondpage .modern .modernimg img{
+            margin: 40px 0 0 50px;
+            height: 400px;
+            width: 400px;
+            margin: -100px 0 0 80px;
+            border-radius: 18px;
+        }
+        .services{
+            height: 90vh;
+            width: 100%;
+            /* border: solid; */
+            display: flex;
+        }
+        .services .leftbox{
+            height: 90vh;
+            width: 50%;
+            /* border: solid; */
+        }
+        .services .img2 img{
+            height: 400px;
+            width: 350px;
+            border-radius: 10px;
+            margin: -100px 0 0 60px;
+        }
+        .services .img3 img{
+            height: 300px;
+            width: 250px;
+            border-radius: 10px;
+            margin: -230px 0 0 380px;
+
+        }
+        .services .img4 img{
+            height: 190px;
+            width: 190px;
+            border-radius: 10px;
+            margin: -600px 0 0 440px;
+            /* margin-top: -800px; */
+
+        }
+        .services .rightbox{
+            height: 90vh;
+            width: 50%;
+            /* border: solid; */
+        }
+        .services .rightbox .inner1{
+            height: 250px;
+            width: 90%;
+            /* border: solid; */
+            margin: 0 0 0 30px;
+            text-align: justify;
+        }
+        .services .rightbox .inner2{
+            height: 250px;
+            width: 90%;
+            /* border: solid; */
+            margin: 0 0 0 30px;
+            /* text-align: justify; */
+            display: grid;
+            grid-template-columns: 50% 50%;
+            grid-template-rows: 50% 50%;
+            text-align: left;
+            gap: 20px;
+        }
+        .services .rightbox button{
+            height: 40px ;
+            width: 100px;
+            border-radius: 18px;
+            background-color: black;
+            margin: 10px 0 0 270px;
+        }
+        .services .rightbox button a{
+            text-decoration: none;
+            color: white;
+        }
+        .services .rightbox .inner1 h1,p{
+           
+            font-family: 'Bona Nova', serif;
+        
+        }
+        .contact{
+            height: 40vh;
+            width: 100%;
+            /* border: solid; */
+            display: flex;
+            background-color:#456942 ;
+            margin: 80px 0 0 0;
+        }
+        .contact .box1{
+            height: 40vh;
+            width: 33.33%;
+            /* border: solid; */
+        }
+        .contact .box1 h4{
+            margin: 25px 0 0 20px;
+            font-size: 14px;
+            color: white;
+            margin: 80px 0 0 100px;
+           
+        }
+        .contact .box1 p{
+            font-size: 7px;
+            margin: 0 0 0 100px;
+            letter-spacing: 1px;
+            color: rgb(154, 148, 148);
+        }
+        .contact .box1 span{
+            color: rgb(212, 169, 90);
+        }
+        .contact .box1 .icons{
+            height: 100px;
+            width:280px;
+            /* border: solid; */
+            margin: 30px 0 0 90px;
+            display: flex;
+            gap: 30px;
+        }
+        .contact .box2{
+            height: 40vh;
+            width: 33.33%;
+            /* border: solid; */
+            /* text-align: center; */
+        }
+        .contact .box2 .links{
+            height: 200px;
+            width: 100%;
+            /* border: solid; */
+            display: grid;
+            grid-template-columns: 33.33% 33.33% 33.33%;
+            grid-template-rows: 33.33% 33.33% 33.33%;
+
+        }
+        .contact .box3{
+            height: 40vh;
+            width: 33.33%;
+            /* border: solid; */
+        }
+        .contact .box2 .links a{
+            text-decoration: none;
+            color: white;
+        }
+        .contact .box3 h2{
+            margin: 100px 0 0 30px;
+            color: white;
+            font-size: 20px;
+        }
+        .contact .box3 .mail{
+            height: 40px;
+            width: 100%;
+            /* border: solid; */
+            margin: 10px 0 0 0;
+            display: flex;
+            gap: 20px;
+        }
+        .contact .box3 .mail input[type="email"]{
+            width: 70%;
+            background-color: beige;
+            border: burlywood;
+            /* border: none; */
+            outline: none;
+            border-radius: 15px;
+        }
+        .contact .box3 button{
+            width:20% ;
+            background-color: rgb(201, 157, 75);
+            outline: none;
+            border: none;
+            border-radius: 10px;
+        }
+        .contact .box3 button a{
+            text-decoration: none;
+            color: white;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- first page starts -->
+    <div class="container">
+        <!-- nav starts -->
+        <div class="header" id="Home">
+            <div class="left">
+                <h4><span>WOOD</span>CASTLE</h4>
+                <p>QUALITY YOU CAN FEEL</p>
+            </div>
+            <div class="nav">
+                <a href="#home">Home</a>
+                <a href="#aboutus">About Us</a>
+                <a href="#services">Services</a>
+                <a href="">Blog</a>
+                <a href="#contact">Contact Us</a>
+            </div>
+            <div class="icons">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person" viewBox="0 0 16 16">
+                    <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0m4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4m-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664z"/>
+                  </svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi-cart" viewBox="0 0 16 16">
+                    <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5M3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4m7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4m-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2m7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2"/>
+                  </svg>
+            </div>
+        </div>
+        <!-- nav ends -->
+        <div class="home" id="home">
+            <!-- first box starts -->
+            <div class="first">
+                <h1>Modern Furniture for your home</h1>
+                <p>One of the most significant differences between modern and contemporary furniture is the use of lines. Modern furniture prefers straight lines, while contemporary furniture will add some large sweeping curves. Color differs between the two as well. If you’re looking at furniture with bold colors, chances are that it’s contemporary.</p>
+                <!-- buttons starts -->
+                <div class="buttons">
+                    <button><a href="">Shop Now</a></button>
+                    <button><a href="">Explore</a></button>
+
+                </div>
+                <!-- buttons ends -->
+            </div>
+            <!-- first box ends -->
+            <!-- second box starts -->
+            <div class="second">
+                <div class="image1">
+                    <img src="img3.png" alt="">
+                </div>
+                <div class="image2">
+                    <img src="img1.png" alt="">
+                </div>
+                <div class="image3">
+                    <!-- <img src="img2.jpeg" alt=""> -->
+                </div>
+
+            </div>
+            <!-- second box ends -->
+        </div>
+    </div>
+    <!-- first page ends -->
+    <!-- second page starts -->
+    <div class="secondpage" id="aboutus" >
+        <!-- first box starts -->
+        <div class="items">
+            <div class="item one">
+                <h2>Premium Components,Masterful Design.</h2>
+                <p>The design process is equally paramount, with our team of skilled designers collaborating to create pieces that seamlessly blend with various interior styles. Innovation and timelessness converge as we draw inspiration from classical aesthetics and cutting-edge trends, resulting in furniture that stands the test of time while remaining eternally relevant.</p>
+                <button><a href="">Explore</a></button>
+            </div>
+            <div class="item two">
+                <img src="item1.png" alt="">
+                <h3>Modern Chair</h3>
+                <h4>$75</h4>
+            </div>
+            <div class="item three">
+                <img src="item2.png" alt="">
+                <h3>Modern Chair</h3>
+                <h4>$95</h4>
+            </div>
+            <div class="item four">
+                <img src="item3.png" alt="">
+                <h3>Modern Chair</h3>
+                <h4>$95</h4>
+            </div>
+
+        </div>
+        <!-- first box ends -->
+        <!-- second box starts -->
+        <div class="more">
+            <div class="choose">
+                <!-- starts -->
+                <div class="reason">
+                    <h2>Why Choose Us</h2>
+                    <p>In every piece, you'll discover the harmonious union of premium components and masterful design, creating furniture that not only furnishes spaces but also elevates the living experience.</p>
+                </div>
+                <!-- ends -->
+                <!-- 2nd left box starts -->
+                <div class="avail">
+                    <div class="box1">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="27" height="27" fill="currentColor" class="bi bi-truck" viewBox="0 0 16 16">
+                            <path d="M0 3.5A1.5 1.5 0 0 1 1.5 2h9A1.5 1.5 0 0 1 12 3.5V5h1.02a1.5 1.5 0 0 1 1.17.563l1.481 1.85a1.5 1.5 0 0 1 .329.938V10.5a1.5 1.5 0 0 1-1.5 1.5H14a2 2 0 1 1-4 0H5a2 2 0 1 1-3.998-.085A1.5 1.5 0 0 1 0 10.5zm1.294 7.456A1.999 1.999 0 0 1 4.732 11h5.536a2.01 2.01 0 0 1 .732-.732V3.5a.5.5 0 0 0-.5-.5h-9a.5.5 0 0 0-.5.5v7a.5.5 0 0 0 .294.456M12 10a2 2 0 0 1 1.732 1h.768a.5.5 0 0 0 .5-.5V8.35a.5.5 0 0 0-.11-.312l-1.48-1.85A.5.5 0 0 0 13.02 6H12zm-9 1a1 1 0 1 0 0 2 1 1 0 0 0 0-2m9 0a1 1 0 1 0 0 2 1 1 0 0 0 0-2"/>
+                          </svg>
+                          <h4>Fast&Free shipping</h4>
+                          <p>Experience the epitome of convenience with our Fast & Free furniture shipping service. We understand that when it comes to transforming your living spaces, time is of the essence.</p>
+                    </div>
+                    <div class="box2">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-bag" viewBox="0 0 16 16">
+                            <path d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1m3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1z"/>
+                          </svg>
+                          <h4>Easy To Shop</h4>
+                          <p>Navigating the world of furniture has never been simpler, as we've designed our online store with your convenience  mind. </p>
+                    </div>
+                    <div class="box3">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-globe2" viewBox="0 0 16 16">
+                            <path d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m7.5-6.923c-.67.204-1.335.82-1.887 1.855-.143.268-.276.56-.395.872.705.157 1.472.257 2.282.287zM4.249 3.539c.142-.384.304-.744.481-1.078a6.7 6.7 0 0 1 .597-.933A7.01 7.01 0 0 0 3.051 3.05c.362.184.763.349 1.198.49zM3.509 7.5c.036-1.07.188-2.087.436-3.008a9.124 9.124 0 0 1-1.565-.667A6.964 6.964 0 0 0 1.018 7.5h2.49zm1.4-2.741a12.344 12.344 0 0 0-.4 2.741H7.5V5.091c-.91-.03-1.783-.145-2.591-.332M8.5 5.09V7.5h2.99a12.342 12.342 0 0 0-.399-2.741c-.808.187-1.681.301-2.591.332zM4.51 8.5c.035.987.176 1.914.399 2.741A13.612 13.612 0 0 1 7.5 10.91V8.5zm3.99 0v2.409c.91.03 1.783.145 2.591.332.223-.827.364-1.754.4-2.741zm-3.282 3.696c.12.312.252.604.395.872.552 1.035 1.218 1.65 1.887 1.855V11.91c-.81.03-1.577.13-2.282.287zm.11 2.276a6.696 6.696 0 0 1-.598-.933 8.853 8.853 0 0 1-.481-1.079 8.38 8.38 0 0 0-1.198.49 7.01 7.01 0 0 0 2.276 1.522zm-1.383-2.964A13.36 13.36 0 0 1 3.508 8.5h-2.49a6.963 6.963 0 0 0 1.362 3.675c.47-.258.995-.482 1.565-.667zm6.728 2.964a7.009 7.009 0 0 0 2.275-1.521 8.376 8.376 0 0 0-1.197-.49 8.853 8.853 0 0 1-.481 1.078 6.688 6.688 0 0 1-.597.933zM8.5 11.909v3.014c.67-.204 1.335-.82 1.887-1.855.143-.268.276-.56.395-.872A12.63 12.63 0 0 0 8.5 11.91zm3.555-.401c.57.185 1.095.409 1.565.667A6.963 6.963 0 0 0 14.982 8.5h-2.49a13.36 13.36 0 0 1-.437 3.008zM14.982 7.5a6.963 6.963 0 0 0-1.362-3.675c-.47.258-.995.482-1.565.667.248.92.4 1.938.437 3.008zM11.27 2.461c.177.334.339.694.482 1.078a8.368 8.368 0 0 0 1.196-.49 7.01 7.01 0 0 0-2.275-1.52c.218.283.418.597.597.932zm-.488 1.343a7.765 7.765 0 0 0-.395-.872C9.835 1.897 9.17 1.282 8.5 1.077V4.09c.81-.03 1.577-.13 2.282-.287z"/>
+                          </svg>
+                          <h4>24/7 Support</h4>
+                          <p>Embrace the unparalleled convenience of 24/7 availability as we redefine the boundaries of furniture shopping to align with your busy lifestyle. </p>
+                    </div>
+                    <div class="box4">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-arrow-left-right" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M1 11.5a.5.5 0 0 0 .5.5h11.793l-3.147 3.146a.5.5 0 0 0 .708.708l4-4a.5.5 0 0 0 0-.708l-4-4a.5.5 0 0 0-.708.708L13.293 11H1.5a.5.5 0 0 0-.5.5m14-7a.5.5 0 0 1-.5.5H2.707l3.147 3.146a.5.5 0 1 1-.708.708l-4-4a.5.5 0 0 1 0-.708l4-4a.5.5 0 1 1 .708.708L2.707 4H14.5a.5.5 0 0 1 .5.5"/>
+                          </svg>  
+                          <h4>Free Returns</h4>
+                          <p>Experience peace of mind with our hassle-free return policy, designed to ensure your complete satisfaction. We understand that selecting furniture for your home is a personal journey</p>  
+                    </div>
+
+                </div>
+            </div>
+            <!-- second left ends -->
+            <!-- second right starts -->
+            <div class="modern">
+                <img src="image.png" alt="">
+                <div class="modernimg">
+                    <img src="image2.avif" alt="">
+                </div>
+            </div>
+            <!--second right ends  -->
+        </div>
+        <!-- second box ends -->
+    </div>
+    <!-- second page ends -->
+    <!-- third page starts -->
+    <div class="services" id="services">
+        <!-- third page left box starts -->
+        <div class="leftbox">
+            <div class="img1">
+                <img src="image3.png" alt="">
+                <div class="img4">
+                    <img src="image6.jpeg" alt="">
+                </div>
+            </div>
+            <div class="img2">
+                <img src="image4.jpeg" alt="">
+            </div>
+            <div class="img3">
+                <img src="image5.jpeg" alt="">
+            </div>
+        </div>
+        <!-- third page left box ends -->
+        <!-- third page right box starts -->
+        <div class="rightbox">
+            <!-- inner1 starts -->
+            <div class="inner1">
+                <h1>we help youmake modern interior design</h1>
+                <p>Immerse yourself in a world where innovation meets comfort, and where each furnishing is a carefully chosen element in the tapestry of your home's interior. Our team of design enthusiasts is ready to assist you at every step, offering insights, recommendations, and a keen eye for the latest trends in modern decor. </p>
+
+            </div>
+            <!-- inner1 ends -->
+            <!-- inner2 starts -->
+            <div class="inner2">
+                <div class="box1">
+                    <ul>
+                        <li><p>Your journey towards modern interior design is not just a shopping experience</p></li>
+                    </ul>
+                </div>
+                <div class="box2"><ul>
+                    <li><p>it's a collaboration with a passionate team dedicated to realizing your vision. </p></li>
+                </ul></div>
+                <div class="box3">
+                    <ul>
+                        <li><p>Let us guide you through the process of creating a space that is not only contemporary but uniquely yours</p></li>
+                    </ul>
+                </div>
+                <div class="box4"><ul>
+                    <li><p>Welcome to a world where we help you turn your interior dreams into a modern reality.</p></li>
+                </ul></div>
+            </div>
+            <!-- inner2 ends -->
+            <button><a href="">Explore</a></button>
+        </div>
+        <!-- thirdpage right box ends -->
+    </div>
+    <!-- third page ends -->
+    <!-- fourth page starts -->
+    <div class="contact" id="contact">
+        <!-- box1 starts -->
+        <div class="box1">
+            <h4><span>WOOD</span>CASTLE</h4>
+            <p>QUALITY YOU CAN FEEL</p> 
+            <div class="icons">
+                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="white" class="bi bi-instagram" viewBox="0 0 16 16">
+                    <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"/>
+                  </svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="white" class="bi bi-facebook" viewBox="0 0 16 16">
+                    <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951"/>
+                  </svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="white" class="bi bi-youtube" viewBox="0 0 16 16">
+                    <path d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.007 2.007 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.007 2.007 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31.4 31.4 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.007 2.007 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A99.788 99.788 0 0 1 7.858 2h.193zM6.4 5.209v4.818l4.157-2.408z"/>
+                  </svg>
+                
+            </div>
+        </div>
+        <!-- box1 ends -->
+        <!-- box2 starts -->
+        <div class="box2">
+            <h3
+            style="color: white;">QUICK LINKS</h3>
+            <div class="links">
+               <p><a href="">Home</a></p>
+               <p><a href="">Blog</a></p>
+               <p><a href="">cart</a></p>
+               <p><a href="">About Us</a></p>
+               <p><a href="">Contact us</a> </p>
+               <p></p>
+               <p><a href="">Sevices</a></p>
+               <p><a href="">Account</a></p>
+
+            </div>
+        </div>
+        <!-- box2 ends -->
+        <!-- box3 starts -->
+        <div class="box3">
+            <h2>Subscribe to our email newsletter</h2>
+            <div class="mail">
+                <input type="email" name="" id="" placeholder="Type tour email">
+                <button><a href="">send</a></button>
+
+            </div>
+        </div>
+        <!-- box3 ends -->
+   
+    </div>
+    <!-- fourth page ends -->
+</body>
+</html>
